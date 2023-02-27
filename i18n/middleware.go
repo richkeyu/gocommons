@@ -56,7 +56,6 @@ func GinI18nMiddleware(c *gin.Context) {
 	// Accept-Language header
 	if !isFound && c != nil && c.Request != nil {
 		lang := httpext.AcceptedLanguages(c.Request)
-		// 替换im30自定义语言代码 zh -> cn tw -> tw
 		for i, l := range lang {
 			if nl, ok := ReplaceLang[l]; ok {
 				lang[i] = nl

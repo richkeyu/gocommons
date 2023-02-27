@@ -3,17 +3,18 @@ package server
 import (
 	"crypto/md5"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"reflect"
 	"runtime"
+
+	"github.com/gin-gonic/gin"
 )
 
 const (
 	debugTokenName       = "token"
 	debugTokenHeaderName = "x-debug-token"
-	debugTokenMd5        = "7c8165518e9da9064f55d2b0cd4cd902" // 密钥www.im30.net
-	debugTokenSalt       = "koppay.net"
+	debugTokenMd5        = "7c8165518e9da9064f55d2b0cd4cd902" 
+	debugTokenSalt       = "richkeyu"
 )
 
 // 默认全局路由 一些公共功能

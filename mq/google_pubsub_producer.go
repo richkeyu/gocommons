@@ -175,7 +175,7 @@ func PublishOrdering(ctx context.Context, projectId, topicId string, orderingKey
 //	// projectID := "my-project-id"
 //	// subID := "my-sub"
 //	ctx := context.Background()
-//	client, err := pubsub.NewClient(ctx, projectID, option.WithCredentialsFile("/Users/yangfan/work/im30/password/kop-pay-003136049374.json"))
+//	client, err := pubsub.NewClient(ctx, projectID, option.WithCredentialsFile("/Users/yangfan/work//password/-pay-003136049374.json"))
 //	if err != nil {
 //		return fmt.Errorf("pubsub.NewClient: %v", err)
 //	}

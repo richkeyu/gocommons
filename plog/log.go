@@ -91,7 +91,7 @@ func StdLogger() *Logger {
 // SetLevel can change the output level of stdLogger.
 // Init will set InfoLevel as default.
 // example:
-// 		import /kop/common/log
+// 		import //common/log
 // 		plog.Init("prod")
 // 		plog.SetLevel(plog.WarnLevel)
 func SetLevel(level logrus.Level) {
