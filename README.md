@@ -1,4 +1,4 @@
-# KOP 公用框架工具
+# 公用框架工具
 
 ## 模块
 
@@ -27,29 +27,3 @@
 ## 使用方法
 go 1.17
 
-需要配置使用公司仓库
-
-`go env -w GOPRIVATE=git.im30.lan`
-
-公司gitlab不支持https需要配置使用http
-
-`go env -w GOINSECURE=git.im30.lan`
-
-私有仓库使用git协议访问(需在gitlab上配置ssh-key)
-```yaml
-执行命令：
-git config --global url."git@git.im30.lan:".insteadOf "http://git.im30.lan/"
-
-或编辑 ~/.gitconfig 添加以下内容
-[url "git@git.im30.lan:"]
-    insteadOf = http://git.im30.lan/
-```
-
-添加依赖
-
-`go get -v git.im30.lan/kop/common
-
-
-## 建议反馈
-
-飞书 haer
