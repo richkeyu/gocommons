@@ -4,9 +4,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/richkeyu/gocommons/plog"
 	"github.com/go-playground/locales"
 	ut "github.com/go-playground/universal-translator"
+	"github.com/richkeyu/gocommons/plog"
 )
 
 var (
@@ -14,7 +14,6 @@ var (
 )
 
 // Translator https://github.com/go-playground/universal-translator/blob/master/_examples/full-with-files/main.go
-// kop 实现的翻译器最低要求
 // wraps ut.Translator in order to handle errors transparently
 // it is totally optional but recommended as it can now be used directly in
 // templates and nobody can add translations where they're not supposed to.

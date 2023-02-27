@@ -57,9 +57,9 @@ func LogReqResp(c *gin.Context) {
 	//	return
 	//}
 
-	debug := c.Query("kop-debug")
+	debug := c.Query("common-debug")
 	if len(debug) == 0 && c.Request != nil && c.Request.Header != nil {
-		debug = c.Request.Header.Get("kop-debug")
+		debug = c.Request.Header.Get("common-debug")
 	}
 
 	rw := &respLogWriter{

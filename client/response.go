@@ -2,13 +2,14 @@ package client
 
 import (
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"reflect"
 	"strings"
 	"time"
+
+	"github.com/sirupsen/logrus"
 
 	jsoniter "github.com/json-iterator/go"
 )
@@ -139,8 +140,8 @@ func (r *Response) GetHeader(name string) []string {
 	return nil
 }
 
-// ParseKopBody 按kop格式解析响应结果 不检查code
-func (r *Response) ParseKopBody(obj interface{}) (resp KopResp, err error) {
+// ParseBody 按格式解析响应结果 不检查code
+func (r *Response) ParseBody(obj interface{}) (resp Resp, err error) {
 	rv := reflect.ValueOf(obj)
 	if rv.Kind() != reflect.Ptr || rv.IsNil() {
 		err = fmt.Errorf("ParseBody param need pointer")
@@ -177,9 +178,9 @@ func (r *Response) ParseKopBody(obj interface{}) (resp KopResp, err error) {
 	return resp, nil
 }
 
-// MustParseKopBody 按kop格式解析响应结果 检查code 如果不等于1 返回error
-func (r *Response) MustParseKopBody(obj interface{}) (resp KopResp, err error) {
-	resp, err = r.ParseKopBody(obj)
+// MustParseBody 按格式解析响应结果 检查code 如果不等于1 返回error
+func (r *Response) MustParseBody(obj interface{}) (resp Resp, err error) {
+	resp, err = r.ParseBody(obj)
 	if err != nil {
 		return resp, err
 	}

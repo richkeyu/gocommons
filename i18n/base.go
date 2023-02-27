@@ -30,7 +30,7 @@ func getTransFromBase(ctx context.Context, conf Config) (map[string]map[string]s
 			return nil, err
 		}
 		var i18nResp BaseI18nResponse
-		_, err = resp.MustParseKopBody(&i18nResp)
+		_, err = resp.MustParseBody(&i18nResp)
 		if err != nil {
 			return nil, err
 		}

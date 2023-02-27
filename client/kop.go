@@ -3,21 +3,21 @@ package client
 import "github.com/richkeyu/gocommons/perrors"
 
 const (
-	kopSuccessCode = 1
+	SuccessCode = 1
 )
 
-type KopResp struct {
+type Resp struct {
 	Code      int         `json:"code"`
 	Data      interface{} `json:"data"`
 	Message   string      `json:"message"`
 	Timestamp int64       `json:"timestamp"`
 }
 
-func (r *KopResp) IsSuccess() bool {
-	return r.Code == kopSuccessCode
+func (r *Resp) IsSuccess() bool {
+	return r.Code == SuccessCode
 }
 
-func (r *KopResp) GetError() error {
+func (r *Resp) GetError() error {
 	if r.IsSuccess() {
 		return nil
 	}
